@@ -1,0 +1,21 @@
+
+   ParseError 
+
+  syntax error, unexpected token "??", expecting "->" or "?->" or "{" or "["
+
+  at app\Http\Controllers\Partner\ProjectDocuments\CompletionActIpIpController.php:72
+     68тЦХ             <p>╨│. " . ($project->city ?: '╨Ь╨╛╤Б╨║╨▓╨░') . " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " . $now->format('d.m.Y') . "</p>
+     69тЦХ             
+     70тЦХ             <p>╨Ш╨╜╨┤╨╕╨▓╨╕╨┤╤Г╨░╨╗╤М╨╜╤Л╨╣ ╨┐╤А╨╡╨┤╨┐╤А╨╕╨╜╨╕╨╝╨░╤В╨╡╨╗╤М {$companyName}, ╨Ш╨Э╨Э {$inn}, ╨Ю╨У╨а╨Э╨Ш╨Я {$ogrnip}, ╨░╨┤╤А╨╡╤Б: {$address}, ╨▓ ╨┤╨░╨╗╤М╨╜╨╡╨╣╤И╨╡╨╝ ┬л╨Ш╤Б╨┐╨╛╨╗╨╜╨╕╤В╨╡╨╗╤М┬╗, ╤Б ╨╛╨┤╨╜╨╛╨╣ ╤Б╤В╨╛╤А╨╛╨╜╤Л, ╨╕</p>
+     71тЦХ             
+  тЮЬ  72тЦХ             <p>╨Ш╨╜╨┤╨╕╨▓╨╕╨┤╤Г╨░╨╗╤М╨╜╤Л╨╣ ╨┐╤А╨╡╨┤╨┐╤А╨╕╨╜╨╕╨╝╨░╤В╨╡╨╗╤М {$project->client_company_name ?? '___________'}, ╨Ш╨Э╨Э {$project->client_inn ?? '___________'}, ╨▓ ╨┤╨░╨╗╤М╨╜╨╡╨╣╤И╨╡╨╝ ┬л╨Ч╨░╨║╨░╨╖╤З╨╕╨║┬╗, ╤Б ╨┤╤А╤Г╨│╨╛╨╣ ╤Б╤В╨╛╤А╨╛╨╜╤Л, ╤Б╨╛╤Б╤В╨░╨▓╨╕╨╗╨╕ ╨╜╨░╤Б╤В╨╛╤П╤Й╨╕╨╣ ╨Р╨║╤В ╨╛ ╤В╨╛╨╝, ╤З╤В╨╛ ╨Ш╤Б╨┐╨╛╨╗╨╜╨╕╤В╨╡╨╗╤М ╨▓╤Л╨┐╨╛╨╗╨╜╨╕╨╗, ╨░ ╨Ч╨░╨║╨░╨╖╤З╨╕╨║ ╨┐╤А╨╕╨╜╤П╨╗ ╤Б╨╗╨╡╨┤╤Г╤О╤Й╨╕╨╡ ╤А╨░╨▒╨╛╤В╤Л:</p>
+     73тЦХ             
+     74тЦХ             <p>1. ╨Ъ╨╛╨╝╨┐╨╗╨╡╨║╤Б ╤А╨╡╨╝╨╛╨╜╤В╨╜╨╛-╨╛╤В╨┤╨╡╨╗╨╛╤З╨╜╤Л╤Е ╤А╨░╨▒╨╛╤В ╨┐╨╛ ╨░╨┤╤А╨╡╤Б╤Г: {$project->address ?? '___________'}</p>
+     75тЦХ             
+     76тЦХ             <p>2. ╨б╤В╨╛╨╕╨╝╨╛╤Б╤В╤М ╨▓╤Л╨┐╨╛╨╗╨╜╨╡╨╜╨╜╤Л╤Е ╤А╨░╨▒╨╛╤В ╤Б╨╛╤Б╤В╨░╨▓╨╗╤П╨╡╤В {$project->work_amount ?? '0'} ({$this->getAmountInWords($project->work_amount ?? 0)}) ╤А╤Г╨▒╨╗╨╡╨╣ 00 ╨║╨╛╨┐╨╡╨╡╨║, ╨Э╨Ф╨б ╨╜╨╡ ╨╛╨▒╨╗╨░╨│╨░╨╡╤В╤Б╤П ╨▓ ╤Б╨▓╤П╨╖╨╕ ╤Б ╨┐╤А╨╕╨╝╨╡╨╜╨╡╨╜╨╕╨╡╨╝ ╨Ш╤Б╨┐╨╛╨╗╨╜╨╕╤В╨╡╨╗╨╡╨╝ ╤Г╨┐╤А╨╛╤Й╨╡╨╜╨╜╨╛╨╣ ╤Б╨╕╤Б╤В╨╡╨╝╤Л ╨╜╨░╨╗╨╛╨│╨╛╨╛╨▒╨╗╨╛╨╢╨╡╨╜╨╕╤П.</p>
+
+  1   vendor\composer\ClassLoader.php:427
+
+  2   [internal]:0
+      Composer\Autoload\ClassLoader::loadClass("App\Http\Controllers\Partner\ProjectDocuments\CompletionActIpIpController")
+

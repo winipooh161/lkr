@@ -1,0 +1,101 @@
+/**
+ * Дополнительные стили для системы обучения на базе intro.js
+ */
+
+/* Стилизация подсказок */
+.introjs-tooltip {
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.intro-welcome {
+    max-width: 500px !important;
+}
+
+.intro-sidebar .introjs-tooltip {
+    max-width: 400px;
+}
+
+.intro-projects .introjs-tooltip,
+.intro-project-info .introjs-tooltip {
+    max-width: 420px;
+}
+
+.intro-action-button .introjs-tooltip {
+    max-width: 350px;
+}
+
+/* Стили для различных типов подсказок */
+.intro-welcome .introjs-tooltiptext,
+.intro-dashboard .introjs-tooltiptext {
+    padding: 18px;
+}
+
+.intro-welcome h4,
+.intro-dashboard h4,
+.intro-project-info h4 {
+    color: #01ACFF;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Стили для списков в подсказках */
+.introjs-tooltiptext ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.introjs-tooltiptext ul li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.introjs-tooltiptext p {
+    margin-bottom: 10px;
+}
+
+.introjs-tooltiptext strong {
+    color: #01ACFF;
+}
+
+/* Анимации подсветок */
+.introjs-helperLayer {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Стиль для обязательных элементов тура */
+.intro-mandatory .introjs-tooltip {
+    border-left: 4px solid #ff5722;
+}
+
+/* Стиль для важных кнопок */
+.intro-important-button .introjs-helperLayer {
+    border-color: #ff5722;
+}
+
+/* Специальные стили для роли клиента */
+.client-user .introjs-tooltip-title {
+    color: #ff5722;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 576px) {
+    .introjs-tooltip {
+        max-width: 90% !important;
+        min-width: 200px;
+    }
+    
+    .introjs-tooltiptext {
+        font-size: 13px;
+        padding: 12px;
+    }
+    
+    .introjs-tooltiptext h4 {
+        font-size: 16px;
+    }
+    
+    .introjs-bullets ul li a {
+        width: 6px;
+        height: 6px;
+    }
+}

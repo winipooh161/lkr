@@ -1,0 +1,96 @@
+/* Стили для документов в модальном окне */
+.document-preview {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.document-preview h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.document-preview .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.document-preview .date {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.document-preview .signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.document-preview .signature-block {
+    width: 45%;
+}
+
+/* Стили для выпадающих меню документов */
+.dropdown-menu {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.dropdown-header {
+    color: var(--bs-primary);
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Улучшения для модального окна документов */
+#document-preview-container {
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6 !important;
+}
+
+#document-preview-loading {
+    padding: 50px 0;
+    transition: all 0.3s ease;
+}
+
+/* Стили для подписи и печати */
+.signature-container, .stamp-container {
+    display: inline-block;
+    position: relative;
+}
+
+.signature-image {
+    height: 50px;
+    max-width: 150px;
+}
+
+.stamp-image {
+    height: 100px;
+    max-width: 100px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -60px;
+    opacity: 0.7;
+}
+
+/* Мобильная адаптация для документов */
+@media (max-width: 768px) {
+    .document-preview {
+        padding: 10px;
+        font-size: 11pt;
+    }
+    
+    .document-preview .signatures {
+        flex-direction: column;
+    }
+    
+    .document-preview .signature-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,97 @@
+/**
+ * Исправления стилей для выпадающих меню
+ */
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block !important;
+    z-index: 1050 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* Исправление для работы выпадающих меню совместно с системой туров */
+body.introjs-shown .dropdown-menu.show {
+    z-index: 10000000 !important;
+    position: absolute !important;
+}
+
+/* Исправление позиционирования для выпадающих меню */
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: 0;
+    margin-top: 0.125rem;
+}
+
+/* Обеспечение видимости выпадающих меню */
+.dropdown {
+    position: relative;
+}
+
+/* Эффект при наведении для выпадающих элементов */
+.dropdown-item {
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover, 
+.dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #1e2125;
+}
+
+.hover-effect:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Модальные окна теперь настраиваются в modal-fixes.css */
+
+/* Исправления для мобильных устройств */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: absolute !important;
+        width: auto !important;
+        min-width: 10rem !important;
+    }
+}
+
+/* Позиционирование меню в таблице */
+.table .dropdown-menu {
+    position: absolute;
+    transform: none !important;
+    top: 100% !important;
+    left: 0 !important;
+    will-change: auto !important;
+    min-width: 10rem !important;
+    z-index: 1050 !important;
+}
+
+/* Исправление для страницы администраторов */
+#filterDropdown + .dropdown-menu,
+#exportDropdown + .dropdown-menu {
+    position: absolute !important;
+    transform: none !important;
+    min-width: 250px !important;
+    z-index: 1050 !important;
+}
+
+/* Специальные исправления для выпадающих меню в таблицах смет */
+.estimate-action-dropdown .dropdown-menu {
+    position: absolute !important;
+    transform: none !important;
+    right: 0 !important;
+    left: auto !important; /* Выравнивание по правому краю */
+    z-index: 1100 !important;
+    min-width: 200px !important;
+    max-width: 300px !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Исправление для мобильной версии админки */
+@media (max-width: 768px) {
+    .table .dropdown-menu {
+        max-width: calc(100vw - 30px) !important;
+    }
+}

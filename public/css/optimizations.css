@@ -1,0 +1,168 @@
+/**
+ * Стили для оптимизации сайта на различных устройствах
+ * С учетом основной цветовой схемы #01ACFF
+ */
+
+/* Общие стили */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Базовые оптимизации */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Улучшенное отображение на мобильных */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Увеличение кнопок на мобильных для удобства нажатия */
+  .btn {
+    padding: 0.5rem 1rem;
+    min-height: 44px; /* Оптимальная высота для тача */
+  }
+  
+  /* Улучшение читабельности текста */
+  body {
+    font-size: 16px;
+  }
+  
+  /* Улучшение навигации */
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  /* Адаптация модальных окон */
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  /* Упрощение таблиц */
+  .table-responsive-mobile {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Улучшение форм */
+  input, select, textarea {
+    font-size: 16px; /* Предотвращает зум на iOS */
+  }
+}
+
+/* Планшеты */
+@media (min-width: 577px) and (max-width: 991px) {
+  /* Улучшенное отображение сайдбара */
+  .sidebar {
+    width: 220px;
+  }
+  
+  /* Оптимизация расположения элементов в форме */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Оптимизации для больших экранов */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px; /* Увеличиваем для лучшего использования пространства */
+  }
+  
+  /* Улучшение читаемости длинного текста */
+  p, .card-text {
+    max-width: 800px;
+  }
+}
+
+/* Режим темной темы (если поддерживается системой) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-supported {
+    /* Эти стили будут применяться только если темная тема включена в системе
+       и мы добавили класс dark-mode-supported к элементу */
+    background-color: #222;
+    color: #f1f1f1;
+  }
+}
+
+/* Оптимизация для печати */
+@media print {
+  /* Удаляем ненужные для печати элементы */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Делаем текст черным для экономии чернил */
+  body {
+    color: #000;
+    background-color: #fff;
+  }
+  
+  /* Показываем URL ссылок в печатной версии */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+  
+  /* Настройка размера страницы при печати */
+  @page {
+    margin: 0.5cm;
+  }
+}
+
+/* Оптимизации для высокой плотности пикселей (ретина дисплеи) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Эти стили будут применены только на дисплеях высокой плотности */
+  .retina-optimized {
+    /* Используем улучшенную визуализацию текста */
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Улучшение доступности для пользователей с ограниченными возможностями */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/* Улучшение фокуса для клавиатурной навигации */
+:focus-visible {
+  outline: 3px solid #01ACFF;
+  outline-offset: 2px;
+}
+
+/* Класс для доступной скрытой навигации к основному содержимому */
+.skip-to-content {
+  position: absolute;
+  top: -40px; /* скрыт по умолчанию */
+  left: 0;
+  z-index: 1050;
+  background: #01ACFF;
+  color: #fff;
+  padding: 8px 15px;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Сглаживание шрифтов */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

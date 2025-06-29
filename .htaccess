@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    AddDefaultCharset UTF-8
+    
+    # Перенаправление с HTTP на HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Исправление запросов без /public в URL
+    RewriteCond %{REQUEST_URI} !^/public
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    
+    # Специальное правило для URL admin/users
+    RewriteRule ^admin/(.*)$ public/admin/$1 [L,QSA]
+    
+    # Основное правило для всех остальных URL
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>
